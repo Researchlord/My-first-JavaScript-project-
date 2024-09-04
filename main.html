@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mexxie | Random insult  and comeback Generator</title>
+    <link rel="stylesheet" href="main.css">
+    <script>
+          const btn = document.querySelector('.btn')
+          function generatorBtn(){
+                  let myArray = ['Your face is so ugly that i mistaken you for joker ']
+                  myArray[1] = [" You face is so ugly  that you make onions cry"]
+                  myArray[2] = ['It ok i understand that you are a product of a one minute man']
+                  myArray[3] = [' i bet You are just a condom escapee...waste of sperm ']
+                  myArray[4] = ['Damn you look like a rejected sacrifice!']
+                  myArray[5] = ['Two wrongs could actually still make a wrong....for example your parents ']
+                  myArray[6] = ["If being stupid was an award,you d' have a PhD in stupidity"]
+                  myArray[7] = ['Being Stupid is a privilege,but you abusing and overusing it!']
+                  myArray[8] = ["If your stupidity could be planted, 90% of earth would be covered with plants"]
+                  myArray[9] = ['You so ugly that your mama wears a face mask just to breastfeed you']
+                  myArray[10] = ['Some ave the gift of being dumb,Some have the gift of being foolish...bruh you have both']
+                  myArray[11] = ["If being beautiful was a crime...you d'be a free forever"]
+                  myArray[12] = ["I envy those who haven't met you"]
+                 let i = Math.floor (Math.random() * myArray.length)
+                  document.querySelector('.txt').innerHTML = myArray[i]
+          }
+          btn.addEventListener('click', generatorBtn())
+
+          function copyText() {
+          const copyBtn = document.getElementById('copyBtn')
+            navigator.clipboard.writeText(copyBtn.value)
+            alert('Copied')
+          }
+          copyBtn.addEventListener('click', copyText())
+          
+    </script>
+</head>
+<body>
+    <div class="logo">Mexxie <button onclick="alert('You are too ugly to check this section....So access denied')">&#9776</button></div>
+    <div class="wrapper">
+        <div class="output"> 
+            <h3 class="txt"> Generated insults would be displayed here </h3>
+            <button id="copyBtn" onclick="copyText()">Copy</button>
+        </div>
+        <button class="btn" onclick="generatorBtn()">Generate</button>
+    </div>
+</body>
+</html>
